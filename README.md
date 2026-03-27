@@ -49,14 +49,33 @@
 
 <br>
 
-## 🚀 What's New in v4.0: The Era of Agent Security
+## 🚀 What's New in v4.1.1: LiteLLM Supply Chain Attack Detection
 
-We are thrilled to announce **AI-Infra-Guard v4.0**, which expands our security boundaries from AI infrastructure to the **Autonomous Agent Ecosystem**. This release introduces two major independent modules:
+- ☠️ **LiteLLM Supply Chain Attack** *(CRITICAL)*: A.I.G now detects compromised LiteLLM v1.82.7/v1.82.8 — if installed, all credentials on the host should be considered stolen. [Release Notes →](https://github.com/Tencent/AI-Infra-Guard/releases/tag/v4.1.1)
+- 🔍 **New Component Coverage**: Added fingerprints and vulnerability rules for Blinko and New-API
+- 🐛 **Bug Fix**: Mask token fields in GetTaskDetail API response to prevent credential leakage
 
-- 🛡️ **OpenClaw Security Scan**: Supports one-click evaluation of OpenClaw security risks, featuring detection for insecure configurations, Skill risks, CVE vulnerabilities, and privacy leakage. It is officially powered by the core security engine from Tencent Zhuque Lab, with Skill security intelligence data co-built in collaboration with Tencent Keen Security Lab.
-- 🤖 **Agent-Scan**: A brand-new, independent multi-agent automated scanning framework designed to evaluate the security of AI agent workflows running across various platforms (Dify, Coze, etc.).
+<details>
+<summary>📌 v4.1 Highlights</summary>
 
-👉  [Try EdgeOne ClawScan](https://matrix.tencent.com/clawscan)
+- 🔍 **Enhanced OpenClaw Detection**: 281 new CVE/GHSA entries added to the vulnerability database
+- ⚡ **Task Efficiency**: Deleting a running task now immediately stops the underlying agent execution
+
+👉 [v4.1 Release Notes](https://github.com/Tencent/AI-Infra-Guard/releases/tag/v4.1)
+
+</details>
+
+<details>
+<summary>📌 v4.0 Highlights</summary>
+
+- 🛡️ **OpenClaw Security Scan (EdgeOne ClawScan)**: One-click security assessment for OpenClaw deployments — detects insecure configs, Skill risks, CVE vulnerabilities, and privacy leakage, powered by Tencent Zhuque Lab with Skill security intelligence co-built by Tencent Keen Security Lab
+- 🤖 **Agent-Scan**: A brand-new multi-agent automated scanning framework for evaluating the security of AI agent workflows (Dify, Coze, etc.), covering indirect prompt injection, SSRF, System Prompt leakage, and more — based on OWASP Top 10 for Agentic Apps 2026
+
+👉 [v4.0 Release Notes](https://github.com/Tencent/AI-Infra-Guard/releases/tag/v4.0)
+
+</details>
+
+👉 [Full v4.1.1 Release Notes](https://github.com/Tencent/AI-Infra-Guard/releases/tag/v4.1.1) · [CHANGELOG](./CHANGELOG.md) · 🩺 [Try EdgeOne ClawScan](https://matrix.tencent.com/clawscan)
 
 
 ## Table of Contents
@@ -130,7 +149,7 @@ Experience the Pro version with advanced features and improved performance. The 
 | **ClawScan(OpenClaw&nbsp;Security&nbsp;Scan)** | Supports one-click evaluation of OpenClaw security risks. It detects insecure configurations, Skill risks, CVE vulnerabilities, and privacy leakage.  |
 | **Agent&nbsp;Scan** | This is an independent, multi-agent automated scanning framework. It is designed to evaluate the security of AI agent workflows. It seamlessly supports agents running across various platforms, including Dify and Coze. |
 | **MCP&nbsp;Server&nbsp;&&nbsp;Agent&nbsp;Skills&nbsp;scan** | It thoroughly detects 14 major categories of security risks. The detection applies to both MCP Servers and Agent Skills. It flexibly supports scanning from both source code and remote URLs. |
-| **AI&nbsp;infra&nbsp;vulnerability&nbsp;scan** | This scanner precisely identifies over 43 AI framework components. It covers more than 589 known CVE vulnerabilities. Supported frameworks include Ollama, ComfyUI, vLLM, n8n, Triton Inference Server and more. |
+| **AI&nbsp;infra&nbsp;vulnerability&nbsp;scan** | This scanner precisely identifies over 49 AI framework components. It covers more than 900 known CVE vulnerabilities. Supported frameworks include Ollama, ComfyUI, vLLM, n8n, Triton Inference Server and more. |
 | **Jailbreak&nbsp;Evaluation** | It assesses prompt security risks using carefully curated datasets. The evaluation applies multiple attack methods to test robustness. It also provides detailed cross-model comparison capabilities. |
 
 <details>
@@ -149,7 +168,7 @@ Experience the Pro version with advanced features and improved performance. The 
 ## 🖼️ Showcase
 
 ### A.I.G Main Interface
-![AIG Main Page](img/aig.gif)
+![A.I.G Main Page](img/aig.gif)
 
 ### Plugin Management
 ![Plugin Management](img/plugin-gif.gif)
